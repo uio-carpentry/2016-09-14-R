@@ -1,19 +1,19 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 carpentry: "swc"    # what kind of Carpentry (must be either "dc" or "swc")
-venue: "One-day unix bash shell workshop"        # brief name of host site without address (e.g., "Euphoric State University")
+venue: "One-day R workshop"        # brief name of host site without address (e.g., "Euphoric State University")
 address: "Room 1259 (Abels utsikt), Niels Henrik Abels hus, Moltke Moes vei 35, 0851 Oslo"     # street address of workshop (e.g., "123 Forth Street, Blimingen, Euphoria")
 country: "no"      # country (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_3166-1)
 language: "en"     # language (lowercase two-letter ISO code such as "fr" - see https://en.wikipedia.org/wiki/ISO_639-1)
 latlng: "59.939673, 10.723284"       # fractional latitude and longitude (e.g., "41.7901128,-87.6007318"; you can use http://www.latlong.net/)
-humandate: "Oct 12th, 2016"    # human-readable date (e.g., "Feb 17-18, 2020")
+humandate: "Sep 14th, 2016"    # human-readable date (e.g., "Feb 17-18, 2020")
 humantime: "9:00 am - 2:00 pm"    # human-readable time (e.g., "9:00 am - 4:30 pm")
-startdate: 2016-10-12      # use YYYY-MM-DD format like 2015-01-01
-enddate: 2016-10-12        # use YYYY-MM-DD format like 2015-01-02
+startdate: 2016-09-14      # use YYYY-MM-DD format like 2015-01-01
+enddate: 2016-09-14        # use YYYY-MM-DD format like 2015-01-02
 instructor: ["Anne Fouilloux"] # list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Oleg Agafonov", "chakri", "Annika Rockenberger"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+helper: ["Oleg Agafonov", "Raoul Wolf", "Chakri Kanduri", "Dmytro Perepølkin"]     # list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 contact: "contact-us@swcarpentry.uio.no"      # contact email address for workshop organizer, such as "grace@hopper.org"
-etherpad: http://pad.software-carpentry.org/2016-10-12-unix        # optional (insert the URL for your Etherpad if you're using one)
+etherpad: http://pad.software-carpentry.org/2016-09-14-R        # optional (insert the URL for your Etherpad if you're using one)
 ---
 
 <!-- See instructions in the comments below for how to edit specific sections of this workshop template. -->
@@ -61,7 +61,7 @@ etherpad: http://pad.software-carpentry.org/2016-10-12-unix        # optional (i
   scientific computing.  This one-day 
   <a href="http://www.uio.no/english/for-employees/support/research/research-data/training/carpentry/">Carpentry@UiO</a> 
   hands-on workshop will cover 
-  the unix bash shell lesson of Software Carpentry.
+  the Programming with R lesson of Software Carpentry.
 </p>
 <p align="center">
   <em>
@@ -141,10 +141,12 @@ etherpad: http://pad.software-carpentry.org/2016-10-12-unix        # optional (i
   attempt to provide them.
 </p>
 
+<!--
 <p id="registeration">
   <strong>Registration:</strong> 
-  Please register using <a href="https://nettskjema.uio.no/answer/74600.html">this form.</a>
+    Please register using <a href="https://nettskjema.uio.no/answer/74600.html">this form.</a>
 </p>
+-->
 
 <!--
   CONTACT EMAIL ADDRESS
@@ -173,15 +175,28 @@ etherpad: http://pad.software-carpentry.org/2016-10-12-unix        # optional (i
 
 <div class="row">
   <div class="col-md-6">
+
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td>10:30</td> <td>Coffee/tea break</td> </tr>
+      <tr> <td>09:00</td>  <td>Learn RStudio environment</td> </tr>
+      <tr> <td>09:30</td> <td>Introduction to R</td> </tr>
+      <tr> <td>10:25</td> <td>Coffee/tea break</td> </tr>
+      <tr> <td>10:50</td> <td>Starting with Data</td> </tr>
+      <tr> <td>11:05</td> <td>Subsetting data</td> </tr>
+      
       <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-	  <tr> <td>13:00</td>  <td>Conclusion and practicing with the Unix shell</td> </tr>
-      <tr> <td>14:00</td>  <td>Wrap-up</td> </tr>
+      
+      <tr> <td>13:00</td>  <td>Creating functions</td> </tr>
+      <tr> <td>13:35</td>  <td>Control flow</td> </tr>
+      <tr> <td>14:35</td>  <td>Coffee/tea break</td> </tr>
+      <tr> <td>14:50</td>  <td>Data visualisation</td> </tr>
+
+      <tr> <td>15:50</td>  <td>Wrap-up</td> </tr>
+
     </table>
   </div>
+  
 </div>
+
 
 <!--
   ETHERPAD
@@ -228,15 +243,16 @@ etherpad: http://pad.software-carpentry.org/2016-10-12-unix        # optional (i
 
 <div class="row">
   <div class="col-md-6">
-    <h3 id="syllabus-shell">The Unix Shell</h3>
+    <h3 id="syllabus-r">Programming in R</h3>
     <ul>
-      <li>Files and directories</li>
-      <li>History and tab completion</li>
-      <li>Pipes and redirection</li>
-      <li>Looping over files</li>
-      <li>Creating and running shell scripts</li>
-      <li>Finding things</li>
-      <li><a href="https://swcarpentry.github.io/shell-novice/reference/">Reference...</a></li>
+      <li>Learn RStudio environment</li>
+      <li>Introduction to R</li>
+      <li>Starting with Data</li>
+      <li>Subsetting data</li>
+      <li>Creating functions</li>
+      <li>Control flow</li>
+      <li>Data visualisation</li>
+      <li><a href="https://swcarpentry.github.io/r-novice-inflammation/reference/">Reference...</a></li>
     </ul>
   </div>
 
@@ -270,155 +286,50 @@ etherpad: http://pad.software-carpentry.org/2016-10-12-unix        # optional (i
   <a href = "https://github.com/swcarpentry/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
 
-<div id="shell"> <!-- Start of 'shell' section. -->
-  <h3>The Bash Shell</h3>
+<div id="r"> <!-- Start of 'R' section. -->
+  <h3>R</h3>
 
   <p>
-    Bash is a commonly-used shell that gives you the power to do simple
-    tasks more quickly.
+    <a href="http://www.r-project.org">R</a> is a programming language
+    that is especially powerful for data exploration, visualization, and
+    statistical analysis. To interact with R, we use
+    <a href="http://www.rstudio.com/">RStudio</a>.
   </p>
 
   <div class="row">
     <div class="col-md-4">
-      <h4 id="shell-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
-      <ol>
-        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps bellow:
-          <ol>
-            <!-- Git 2.8.2 Setup -->
-            <!-- Information -->
-            <li>Click on "Next".</li>
-            <!-- Select Components -->
-            <li>Click on "Next".</li>
-            <!-- Adjusting your PATH environment -->
-            <li>
-              <strong>
-                Keep "Use Git from the Windows Command Prompt" selected and click on "Next".
-              </strong>
-                If you forgot to do this programs that you need for the workshop will not work properly.
-                If this happens rerun the installer and select the appropriate option.
-            </li>
-            <!-- Choosing the SSH executable -->
-            <li>Click on "Next".</li>
-            <!-- Configuring the line ending conversions -->
-            <li>
-              <strong>
-                Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
-              </strong>
-            </li>
-            <!-- Configuring the terminal emulator to use with Git Bash -->
-            <li>
-              <strong>
-                Keep "Use Windows' default console window" selected and click on "Next".
-              </strong>
-            </li>
-            <!-- Configuring experimental performance tweaks -->
-            <li>Click on "Install".</li>
-            <!-- Installing -->
-            <!-- Completing the Git Setup Wizard -->
-            <li>Click on "Finish".</li>
-          </ol>
-        </li>
-        <li>
-          If your "HOME" environment variable is not set (or you don't know what this is):
-          <ol>
-            <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press [Enter])</li>
-            <li>
-              Type the following line into the command prompt window exactly as shown:
-              <p><code>setx HOME "%USERPROFILE%"</code></p>
-            </li>
-            <li>Press [Enter], you should see <code>SUCCESS: Specified value was saved.</code></li>
-            <li>Quit command prompt by typing <code>exit</code> then pressing [Enter]</li>
-          </ol>
-        </li>
-      </ol>
-      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="shell-macosx">Mac OS X</h4>
+      <h4 id="r-windows">Windows</h4>
+      <a href="https://www.youtube.com/watch?v=q0PjTAylwoU">Video Tutorial</a>
       <p>
-        The default shell in all versions of Mac OS X is Bash, so no
-        need to install anything.  You access Bash from the Terminal
-        (found in
-        <code>/Applications/Utilities</code>).
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open the Terminal.
-        You may want to keep
-        Terminal in your dock for this workshop.
+        Install R by downloading and running
+        <a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
+        from <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Also, please install the
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
       </p>
     </div>
     <div class="col-md-4">
-      <h4 id="shell-linux">Linux</h4>
+      <h4 id="r-macosx">Mac OS X</h4>
+      <a href="https://www.youtube.com/watch?v=5-ly3kyxwEg">Video Tutorial</a>
       <p>
-        The default shell is usually Bash, but if your
-        machine is set up differently you can run it by opening a
-        terminal and typing <code>bash</code>.  There is no need to
-        install anything.
+        Install R by downloading and running
+        <a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
+        from <a href="http://cran.r-project.org/index.html">CRAN</a>.
+        Also, please install the
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h4 id="r-linux">Linux</h4>
+      <p>
+        You can download the binary files for your distribution
+        from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
+        you can use your package manager (e.g. for Debian/Ubuntu
+        run <code>sudo apt-get install r-base</code> and for Fedora run
+        <code>sudo yum install R</code>).  Also, please install the
+        <a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
       </p>
     </div>
   </div>
-</div> <!-- End of 'shell' section. -->
+</div> <!-- End of 'R' section. -->
 
-<div id="editor"> <!-- Start of 'editor' section. -->
-  <h3>Text Editor</h3>
-
-  <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on Mac OS X and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
-    typing the escape key, followed by <code>:q!</code> (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="editor-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
-      <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        To install it,
-        download the <a href="{{site.swc_installer}}">Software Carpentry Windows installer</a>
-        and double click on the file to run it.
-        <strong>This installer requires an active internet connection.</strong>
-      </p>
-      <p>
-        Others editors that you can use are
-        <a href="http://notepad-plus-plus.org/">Notepad++</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-        <strong>Be aware that you must
-          add its installation directory to your system path.</strong>
-        Please ask your instructor to help you do this.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-macosx">Mac OS X</h4>
-      <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open nano.
-        It should be pre-installed.
-      </p>
-      <p>
-        Others editors that you can use are
-        <a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-linux">Linux</h4>
-      <p>
-        nano is a basic editor and the default that instructors use in the workshop.
-        It should be pre-installed.
-      </p>
-      <p>
-        Others editors that you can use are
-        <a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a>,
-        <a href="http://kate-editor.org/">Kate</a> or
-        <a href="http://www.sublimetext.com/">Sublime Text</a>.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'editor' section. -->
